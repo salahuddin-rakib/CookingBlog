@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CookingBlog</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+  <div>
+    <div class="navbar-header">
+      <img src="ruby.jpg" width="50" height="64">
+      <a class="navbar-brand">Cooking Blog</a>
+      <hr>
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Home", home_path %></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Create Post", new_post_path %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<hr>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
+</html>
